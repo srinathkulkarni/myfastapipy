@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfastapipy
+  labels:
+    app: wmyfastapipy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myfastapi
+  template:
+    metadata:
+      labels:
+        app: myfastapi
+    spec:
+      containers:
+      - name: myfastapipy
+        image: myfastapipy:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000 andesai@express-scripts.com 23018427 
+        23014581
